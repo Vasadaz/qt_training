@@ -11,15 +11,35 @@ class MyWin(QtWidgets.QMainWindow):
         self.ui = des.Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.handler)
-        self.ui.pushButton_2.clicked.connect(self.setcolor)
+        self.ui.checkBox.clicked.connect(self.handler_checkbox)
+        self.ui.radioButton.clicked.connect(self.handler_radio)
 
     def handler(self):
-        self.ui.pushButton.setDisabled(True)
-        self.ui.plainTextEdit.appendPlainText('text')
-        self.ui.label.setText('DONE!')
+        checkbox = ' CHECK '
+        radio = ' RADIO '
+        if self.ui.checkBox.isChecked():
+            checkbox += self.ui.checkBox.text()
+
+        if self.ui.checkBox_2.isChecked():
+            checkbox += self.ui.checkBox_2.text()
+
+        if self.ui.radioButton.isChecked():
+            radio += self.ui.radioButton.text()
+
+        elif self.ui.radioButton_2.isChecked():
+            radio += self.ui.radioButton_2.text()
+
+        self.ui.plainTextEdit.appendPlainText('text' + checkbox + radio)
         self.ui.pushButton.setText('STOP')
         self.ui.pushButton.setStyleSheet('background-color: #E74D25; color: white;')
         print('work')
+
+    def handler_radio(self):
+        self.ui.plainTextEdit.appendPlainText('I Radio')
+        self.ui.radioButton_2.setText('***')
+
+    def handler_checkbox(self):
+        self.ui.plainTextEdit.appendPlainText('I CHECK')
 
 
     def setcolor(self):
