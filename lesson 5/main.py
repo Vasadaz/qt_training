@@ -1,14 +1,14 @@
 import sys
-import time
 
-from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtWidgets
 
-import des
+import qt_code
+
 
 class MyWin(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         QtWidgets.QWidget.__init__(self, parent)
-        self.ui = des.Ui_MainWindow()
+        self.ui = qt_code.Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.handler)
         self.ui.checkBox.clicked.connect(self.handler_checkbox)
@@ -41,13 +41,10 @@ class MyWin(QtWidgets.QMainWindow):
     def handler_checkbox(self):
         self.ui.plainTextEdit.appendPlainText('I CHECK')
 
-
     def setcolor(self):
         self.ui.pushButton.setDisabled(False)
         self.ui.pushButton.setText('GO')
         self.ui.pushButton.setStyleSheet('background-color: #00E000; color: white;')
-
-
 
 
 if __name__ == '__main__':
