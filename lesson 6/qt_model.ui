@@ -7,23 +7,27 @@
     <x>0</x>
     <y>0</y>
     <width>621</width>
-    <height>300</height>
+    <height>310</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>621</width>
-    <height>300</height>
+    <height>310</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>621</width>
-    <height>300</height>
+    <height>310</height>
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>MyTable</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/app_icon/icons/app_icon.ico</normaloff>:/app_icon/icons/app_icon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="gridLayoutWidget">
@@ -32,7 +36,7 @@
       <x>0</x>
       <y>0</y>
       <width>621</width>
-      <height>301</height>
+      <height>309</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -77,10 +81,10 @@
        <attribute name="verticalHeaderCascadingSectionResizes">
         <bool>true</bool>
        </attribute>
-       <attribute name="verticalHeaderDefaultSectionSize">
+       <attribute name="verticalHeaderMinimumSectionSize">
         <number>30</number>
        </attribute>
-       <attribute name="verticalHeaderMinimumSectionSize">
+       <attribute name="verticalHeaderDefaultSectionSize">
         <number>30</number>
        </attribute>
        <attribute name="verticalHeaderShowSortIndicator" stdset="0">
@@ -205,10 +209,56 @@
        </item>
       </layout>
      </item>
+     <item row="3" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="styleSheet">
+          <string notr="true">image: url(:/images/icons/C.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="styleSheet">
+          <string notr="true">image: url(:/images/icons/Python.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">image: url(:/images/icons/HTML.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">image: url(:/images/icons/PC.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
     </layout>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>
