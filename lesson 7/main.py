@@ -81,6 +81,7 @@ class GUI(QtWidgets.QMainWindow):
             self.ui.ProgressBar.setStyleSheet(default_style)
             self.progress_flag = False
 
+
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     myapp = GUI()
