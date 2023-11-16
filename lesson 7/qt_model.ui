@@ -75,7 +75,7 @@
      </rect>
     </property>
     <property name="value">
-     <number>24</number>
+     <number>0</number>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -109,7 +109,7 @@
      <string/>
     </property>
     <property name="placeholderText">
-     <string>Лог программы...</string>
+     <string>Введите значение</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="PlainTextEdit">
