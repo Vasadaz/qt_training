@@ -18,13 +18,13 @@ class GUI(QtWidgets.QMainWindow):
         window = ModalWindow(self)
         window.show()
 
-    def open_modal_window2(parent):
-
-        modal_window2 = QtWidgets.QWidget(parent, QtCore.Qt.WindowType.Window)
+    def open_modal_window2(self):
+        modal_window2 = QtWidgets.QWidget(self, QtCore.Qt.WindowType.Window)
         modal_window2.setWindowTitle('ModalW2')
         modal_window2.resize(300, 500)
         modal_window2.setWindowModality(QtCore.Qt.WindowModality.WindowModal)
         modal_window2.show()
+
 
 class ModalWindow(QtWidgets.QWidget):
     def __init__(self, parent=GUI):
