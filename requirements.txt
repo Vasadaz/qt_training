@@ -1,4 +1,5 @@
 pyinstaller==6.2.0
-PyQt6==6.4.2
-pyqt6-tools==6.4.2.3.3
-PySide6==6.4.2
+PyQt6==6.6.0
+#pyqt6-tools
+PyQt6-WebEngine==6.6.0
+PySide6==6.6.0
